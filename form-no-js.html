@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact Hieu Le using a form with native HTML validation."
+    />
+    <title>Contact | Hieu Le</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+      <p class="site-name"><a href="index.html">Hieu Le</a></p>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="projects.html">Projects &amp; resume</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+          <li><a href="form-no-js.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <h1>Contact me</h1>
+      <p>
+        Have a question or want to talk about a project? Leave a message below.
+      </p>
+      <p id="form-instructions">
+        All fields are required. Use sample contact information: this demo sends
+        your entries to httpbin, which displays them on a results page.
+        A dashed border marks a field that needs correction after validation.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://httpbin.org/post"
+        method="post"
+        aria-describedby="form-instructions"
+      >
+        <div class="form-field">
+          <label for="name">Name (required)</label>
+          <p class="field-hint" id="name-hint">
+            Enter 1–100 characters. Names in any language are welcome.
+          </p>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            minlength="1"
+            maxlength="100"
+            aria-describedby="name-hint"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email (required)</label>
+          <p class="field-hint" id="email-hint">
+            Enter an email address, for example alex@example.com.
+          </p>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            aria-describedby="email-hint"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="comments">Comments (required)</label>
+          <p class="field-hint" id="comments-hint">
+            Enter 10–1,000 characters about your question or project.
+          </p>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="6"
+            minlength="10"
+            maxlength="1000"
+            aria-describedby="comments-hint"
+            required
+          ></textarea>
+        </div>
+
+        <input type="hidden" name="possible_bot" value="true" />
+        <button type="submit">Send message</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; Hieu Le</p>
+      <p><a href="projects.html#resume">Resume information</a></p>
+    </footer>
+  </body>
+</html>

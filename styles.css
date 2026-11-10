@@ -752,6 +752,48 @@ textarea {
   resize: vertical;
 }
 
+.contact-form {
+  display: grid;
+  gap: var(--space);
+  max-width: 32rem;
+}
+
+.contact-form .form-field {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.contact-form label {
+  margin: 0;
+  font-weight: bold;
+}
+
+.contact-form .field-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact-form :is(input, textarea):required {
+  border-width: 2px;
+  border-inline-start-width: 4px;
+}
+
+/* Wait for user interaction; keep border widths stable in every state. */
+.contact-form :is(input, textarea):user-invalid {
+  border-color: #942e24;
+  border-style: dashed;
+}
+
+.contact-form :is(input, textarea):user-valid {
+  border-color: var(--forest);
+}
+
+.contact-form button {
+  justify-self: start;
+}
+
 button:disabled {
   border-color: var(--rule);
   background: var(--paper);
