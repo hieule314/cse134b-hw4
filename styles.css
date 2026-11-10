@@ -1,4 +1,4 @@
-/* Hieu Le | https://github.com/hieule314/cse134b-hw3 */
+/* Hieu Le | https://github.com/hieule314/cse134b-hw4 */
 
 /* The pixel font is served locally; its license is in assets/fonts/OFL.txt. */
 @font-face {
@@ -12,6 +12,7 @@
 }
 
 :root {
+  color-scheme: light;
   --paper: #f6f1e5;
   --surface: #fffcf4;
   --ink: #35281f;
@@ -20,6 +21,8 @@
   --forest-dark: #173528;
   --fern: #bfd1a2;
   --rule: #c9c2ae;
+  --error: #942e24;
+  --warning: #755014;
   --body-font: "Trebuchet MS", "Segoe UI", sans-serif;
   --pixel-font: "Pixelify Sans", "Courier New", monospace;
   --page-width: 72rem;
@@ -27,8 +30,26 @@
   --space: 1.5rem;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #17231d;
+  --surface: #223229;
+  --ink: #f3efdf;
+  --muted: #c3c6b6;
+  --forest: #add0a1;
+  --forest-dark: #c5e2b9;
+  --fern: #3e5c3d;
+  --rule: #5d7363;
+  --error: #ffb5a8;
+  --warning: #f5d480;
+}
+
 * {
   box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 html {
@@ -60,12 +81,21 @@ body > footer {
 
 body > header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: var(--space);
   min-height: 6.5rem;
   padding-block: 1rem;
   border-bottom: 1px solid var(--rule);
+}
+
+body > header nav {
+  margin-left: auto;
+}
+
+.theme-toggle {
+  font-size: 0.85rem;
 }
 
 .site-name {
@@ -782,12 +812,45 @@ textarea {
 
 /* Wait for user interaction; keep border widths stable in every state. */
 .contact-form :is(input, textarea):user-invalid {
-  border-color: #942e24;
+  border-color: var(--error);
   border-style: dashed;
 }
 
 .contact-form :is(input, textarea):user-valid {
   border-color: var(--forest);
+}
+
+.contact-form :is(input, textarea)[aria-invalid="true"] {
+  border-color: var(--error);
+  border-style: dashed;
+}
+
+.form-feedback {
+  padding: 1rem;
+  border: 2px solid var(--rule);
+  background: var(--surface);
+}
+
+.form-feedback h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
+}
+
+.form-feedback p,
+.form-feedback ul {
+  margin: 0;
+}
+
+.form-error-area {
+  border-color: var(--error);
+  border-style: dashed;
+  color: var(--error);
+}
+
+.form-feedback.is-warning {
+  border-color: var(--warning);
+  border-style: double;
+  color: var(--warning);
 }
 
 .contact-form button {
@@ -1001,6 +1064,7 @@ body > footer p {
 
   body > header nav {
     width: 100%;
+    margin-left: 0;
   }
 
   body > header nav ul {
@@ -1102,6 +1166,11 @@ body > footer p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+
   a,
   button,
   .project-card,
