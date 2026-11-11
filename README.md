@@ -3,7 +3,7 @@
 | Deliverable | URL |
 | :--- | :--- |
 | Repository | https://github.com/hieule314/cse134b-hw4 |
-| Website | Deployment pending |
+| Website | https://hieule-cse134b-hw4.netlify.app/ |
 
 My personal portfolio uses semantic HTML, shared CSS, and native browser APIs.
 Both contact forms are linked from every portfolio page's main navigation.
@@ -84,16 +84,22 @@ Browser checks cover:
 - The native View Transition API, unsupported-API fallback, and reduced-motion behavior.
 - All portfolio pages at widths of 320, 375, 768, and 1280 pixels in both themes.
 
-Use sample contact information when submitting to httpbin. Repeat the keyboard,
-theme, and view-transition checks on the deployed website in desktop Chrome.
+Use sample contact information when submitting to httpbin. The checks above also
+passed on the deployed website in desktop Chrome 157. An automated axe-core scan
+found no WCAG A/AA violations on the portfolio pages in either theme.
 
 ## Separate Homework 4 deployment
 
 Create a new Netlify project connected to `hieule314/cse134b-hw4`, branch `main`.
 Leave the build command empty and use `.` as the publish directory; `netlify.toml`
 also specifies that directory. No dependency installation or build step is needed.
-Keep the Homework 2 and Homework 3 deployments separate. After publishing, replace
-the pending website URL above and submit the repository and website links.
+Keep the Homework 2 and Homework 3 deployments separate. Submit the repository
+and website links above.
+
+Netlify's Powered by Netlify badge injects a script into served HTML, including
+the script-free form. Turn it off under Project configuration > General > Powered
+by Netlify badge, then save. This hosting setting takes effect without a redeploy.
+See [Netlify's badge documentation](https://docs.netlify.com/manage/projects/powered-by-netlify-badge/).
 
 ## References
 
