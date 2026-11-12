@@ -9,22 +9,6 @@
   fitExplorer();
   narrowScreen.addEventListener("change", fitExplorer);
 
-  // Real anchor links remain usable when this enhancement is unavailable.
-  const outlineLinks = [...document.querySelectorAll("[data-section]")];
-  const sections = outlineLinks.map(link => document.getElementById(link.dataset.section));
-  if (outlineLinks.length && "IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(entries => {
-      const visible = entries.filter(entry => entry.isIntersecting);
-      if (!visible.length) return;
-      const active = visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0].target.id;
-      for (const link of outlineLinks) {
-        if (link.dataset.section === active) link.setAttribute("aria-current", "location");
-        else link.removeAttribute("aria-current");
-      }
-    }, { rootMargin: "-15% 0px -45% 0px", threshold: [0, 0.1, 0.25] });
-    sections.filter(Boolean).forEach(section => observer.observe(section));
-  }
-
   const toolkit = document.querySelector(".toolkit");
   if (!toolkit) return;
 

@@ -143,17 +143,13 @@ button:disabled { border-color: var(--rule); background: var(--paper); color: va
 .explorer-folder summary::-webkit-details-marker { display: none; }
 .explorer-folder summary::before { content: "›"; font-size: 1rem; }
 .explorer-folder[open] > summary::before { rotate: 90deg; }
-.explorer-tree ul, .page-outline ul { margin: 0; padding: 0; list-style: none; }
+.explorer-tree ul { margin: 0; padding: 0; list-style: none; }
 .explorer-tree ul { margin-left: 0.8rem; border-left: 1px solid var(--rule); }
-.explorer-tree li + li, .page-outline li + li { margin-top: 0; }
+.explorer-tree li + li { margin-top: 0; }
 .explorer-tree a { display: flex; align-items: center; gap: 0.55rem; min-height: 2.6rem; padding: 0.4rem 0.45rem; border-left: 2px solid transparent; color: var(--muted); font: 0.72rem/1.5 var(--mono-font); text-decoration: none; white-space: nowrap; }
 .explorer-tree a:hover { color: var(--forest); background: color-mix(in srgb, var(--forest) 8%, transparent); }
 .explorer-tree a[aria-current="page"] { border-left-color: var(--forest); background: color-mix(in srgb, var(--forest) 12%, transparent); color: var(--forest); }
 .file-icon { color: var(--forest); font-size: 0.7rem; font-weight: bold; }
-.page-outline { padding: 1rem 0.8rem; border-top: 1px solid var(--rule); }
-.page-outline p { margin: 0 0 0.55rem; color: var(--muted); font: 0.6rem/1.6 var(--mono-font); letter-spacing: 0.1em; }
-.page-outline a { display: flex; align-items: center; gap: 0.7rem; min-height: 2.2rem; color: var(--muted); font-size: 0.75rem; text-decoration: none; }
-.page-outline a[aria-current="location"] { color: var(--forest); font-weight: 700; }
 .explorer-bottom { margin-top: auto; padding-top: 1.5rem; }
 .theme-toggle { width: 100%; padding: 0.6rem; font-size: 0.75rem; }
 .explorer-social { display: flex; gap: 1.5rem; margin: 1.2rem 0; font: 0.7rem/1.7 var(--mono-font); }
@@ -353,7 +349,7 @@ dd { margin: 0 0 1rem; }
   .explorer-tree { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .explorer-folder + .explorer-folder { margin: 0; }
   .explorer-tree a { font-size: 0.75rem; }
-  .page-outline, .explorer-social { display: none; }
+  .explorer-social { display: none; }
   .explorer-bottom { margin-top: 0; padding-top: 0.85rem; }
   .theme-toggle { width: auto; padding: 0.5rem 0.75rem; }
   .explorer-bottom:empty { display: none; }

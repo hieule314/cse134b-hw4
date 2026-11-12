@@ -26,7 +26,6 @@ locally from Devicon with its license in `assets/icons/`.
 - Explorer folders use native `details` and real links. They work without JavaScript.
 - On narrow screens, JavaScript starts the outer explorer closed to leave room for content. Its disclosure remains keyboard accessible.
 - Main narrative sections use `min-height: 100svh`. They can grow when text or images need more room. Desktop proximity scroll snapping helps align sections without intercepting wheel, touch, or keyboard input.
-- The page outline indicates the current section without moving keyboard focus.
 - Skill rows pause or resume when selected or when Enter/Space is pressed while a row is focused. Reduced motion and disabled JavaScript show complete, static lists. Duplicate animation strips are hidden from assistive technology.
 - The illustrated character is used for browser/bookmark icons and beside the sidebar name. The sidebar portrait has a brief CSS greeting that respects reduced motion. The original initials SVG is retained.
 - `form-no-js.html` has no scripts or inline event handlers. Form constraints and `form.js` have been preserved.
@@ -39,7 +38,7 @@ Tested in desktop Chrome 157 with JavaScript enabled and disabled:
 - Both forms' validation, keyboard submission, real httpbin POST, and serialized error history.
 - Theme persistence, blocked storage, supported/unsupported view transitions, and reduced motion.
 - All portfolio pages at 320, 375, 768, 1024, 1280, and 1440 CSS pixels without horizontal overflow.
-- Desktop viewport-sized sections, current-section navigation, moving skill rows, pointer/keyboard pause and resume, keycap contact links, and mobile disclosure operation.
+- Desktop viewport-sized sections, file navigation, moving skill rows, pointer/keyboard pause and resume, keycap contact links, and mobile disclosure operation.
 - All photos, local icons, and favicon assets.
 - Automated axe-core WCAG A/AA scans on all portfolio pages in both themes: no violations found. This scan supplements keyboard and visual checks.
 
