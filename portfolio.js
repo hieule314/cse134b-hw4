@@ -26,8 +26,7 @@
   }
 
   const toolkit = document.querySelector(".toolkit");
-  const motionButton = document.querySelector("#skills-motion");
-  if (!toolkit || !motionButton) return;
+  if (!toolkit) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let paused = false;
@@ -40,22 +39,49 @@
     track.append(copy);
   }
 
+  const skillWindows = [...toolkit.querySelectorAll(".skill-window")];
+  const help = document.createElement("p");
+  help.id = "skill-motion-help";
+  help.className = "sr-only";
+  help.textContent = "Select a skill row or press Enter or Space while focused to pause or resume rotation.";
+  toolkit.append(help);
+
   function updateMotion() {
-    if (reducedMotion.matches) {
-      delete toolkit.dataset.skillsMotion;
-      motionButton.hidden = true;
-      return;
+    if (reducedMotion.matches) delete toolkit.dataset.skillsMotion;
+    else toolkit.dataset.skillsMotion = paused ? "paused" : "running";
+
+    for (const window of skillWindows) {
+      const label = window.closest(".skill-row").querySelector("h3").textContent;
+      if (reducedMotion.matches) {
+        window.removeAttribute("tabindex");
+        window.removeAttribute("aria-describedby");
+        window.removeAttribute("title");
+        window.setAttribute("aria-label", label);
+      } else {
+        window.tabIndex = 0;
+        window.setAttribute("aria-describedby", help.id);
+        window.title = paused ? "Select to resume rotation" : "Select to pause rotation";
+        window.setAttribute("aria-label", `${label}. Rotation ${paused ? "paused" : "running"}.`);
+      }
     }
-    toolkit.dataset.skillsMotion = paused ? "paused" : "running";
-    motionButton.hidden = false;
-    motionButton.setAttribute("aria-pressed", String(paused));
-    motionButton.textContent = paused ? "Resume skill rotation" : "Pause skill rotation";
   }
 
-  motionButton.addEventListener("click", () => {
+  function toggleMotion() {
+    if (reducedMotion.matches) return;
     paused = !paused;
     updateMotion();
-  });
+  }
+
+  for (const window of skillWindows) {
+    window.setAttribute("role", "group");
+    window.addEventListener("click", toggleMotion);
+    window.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleMotion();
+      }
+    });
+  }
   reducedMotion.addEventListener("change", updateMotion);
   updateMotion();
 })();
