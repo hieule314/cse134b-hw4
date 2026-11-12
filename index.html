@@ -3,171 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Meet Hieu Le, a Mathematics–Computer Science student at UC San Diego working on full stack development and AI/ML projects."
-    />
-    <title>Hieu Le | Home</title>
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Hieu Le — software engineering, AI/ML, and selected projects." />
+    <title>Hieu Le | Software &amp; AI</title>
+    <link rel="icon" href="assets/images/favicon-hieu.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="theme.js" defer></script>
+    <script src="portfolio.js" defer></script>
   </head>
-  <body>
+  <body class="portfolio-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header>
-      <p class="site-name"><a href="index.html">Hieu Le</a></p>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About me</a></li>
-          <li><a href="projects.html">Projects &amp; resume</a></li>
-          <li><a href="experiments.html">Experiments</a></li>
-          <li><a href="form-no-js.html">Contact (HTML)</a></li>
-          <li><a href="form-with-js.html">Contact (JS)</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle button-secondary" type="button" hidden>
-        Switch to dark theme
-      </button>
+    <header class="site-explorer">
+      <div class="explorer-brand">
+        <p class="site-name"><a href="index.html">Hieu Le<span aria-hidden="true">.</span></a></p>
+        <p class="brand-caption">Software engineering &amp; AI</p>
+      </div>
+      <details class="explorer-panel" open>
+        <summary class="explorer-title" aria-label="Site explorer"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span> EXPLORER</summary>
+        <nav aria-label="Main navigation" class="explorer-tree">
+          <details class="explorer-folder" open>
+            <summary>portfolio/</summary>
+            <ul>
+              <li><a href="index.html" aria-label="Home" aria-current="page"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>index.html</a></li>
+              <li><a href="about.html" aria-label="About me"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>about.html</a></li>
+              <li><a href="projects.html" aria-label="Projects & resume"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>projects.html</a></li>
+              <li><a href="experiments.html" aria-label="Experiments"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>experiments.html</a></li>
+            </ul>
+          </details>
+          <details class="explorer-folder" open>
+            <summary>contact/</summary>
+            <ul>
+              <li><a href="form-no-js.html" aria-label="Contact (HTML)"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>form-no-js.html</a></li>
+              <li><a href="form-with-js.html" aria-label="Contact (JS)"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>form-with-js.html</a></li>
+            </ul>
+          </details>
+        </nav>
+        <nav class="page-outline" aria-label="Page sections">
+          <p>ON THIS PAGE</p>
+          <ul>
+            <li><a href="#hello" data-section="hello"><span aria-hidden="true">01</span> Hello</a></li>
+            <li><a href="#toolkit" data-section="toolkit"><span aria-hidden="true">02</span> Technical skills</a></li>
+            <li><a href="#selected-work" data-section="selected-work"><span aria-hidden="true">03</span> Selected work</a></li>
+            <li><a href="#say-hello" data-section="say-hello"><span aria-hidden="true">04</span> Get in touch</a></li>
+          </ul>
+        </nav>
+      </details>
+      <div class="explorer-bottom">
+        <button class="theme-toggle button-secondary" type="button" hidden>Switch to dark theme</button>
+        <p class="explorer-social"><a href="https://github.com/hieule314">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/hieule314/">LinkedIn <span aria-hidden="true">↗</span></a></p>
+        <p class="explorer-location">Mathematics–Computer Science<br />UC San Diego</p>
+      </div>
     </header>
-
-    <main id="main-content" tabindex="-1">
-      <section class="intro" aria-labelledby="intro-heading">
-        <div class="intro-copy">
-          <h1 id="intro-heading">
-            <span class="intro-greeting">Hi! My name is</span>
-            <span class="intro-name">Hieu Le.</span>
-          </h1>
-          <p>
-            I am a fourth-year Mathematics–Computer Science student at the
-            University of California, San Diego, and a full stack developer
-            actively working on websites and AI/ML projects.
-          </p>
-          <p>
-            I delivered AI features for Treevah, a B2C SaaS AI startup, and built
-            a MERN-stack travel planner with a team at the San Diego
-            Supercomputer Center. I also worked as a machine learning researcher
-            under Ryan Kastner on real-time ecological monitoring systems for
-            the San Diego Zoo.
-          </p>
-          <p class="intro-links">
-            <a class="button-link" href="projects.html">Explore my projects</a>
-            <span>or <a href="about.html">read more about me</a>.</span>
-          </p>
+    <main id="main-content" class="staged" tabindex="-1">
+      <section class="stage hero" id="hello" aria-labelledby="intro-heading">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Software engineering · AI / ML</p>
+          <h1 id="intro-heading">Hieu Le<span class="accent">.</span></h1>
+          <p class="hero-lead">Turning complicated tasks into useful software.</p>
+          <p class="hero-context">I’m a Mathematics–Computer Science student at UC San Diego, building across the web and AI.</p>
+          <div class="actions"><a class="button-link" href="projects.html#watchtower">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="form-with-js.html">Get in touch</a></div>
         </div>
-        <figure class="portrait">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/aboutme-480.webp 480w,
-                assets/images/aboutme.webp     900w
-              "
-              sizes="(max-width: 48rem) min(23.375rem, calc(100vw - 4.875rem)), (max-width: 76rem) calc(39vw - 4.75rem), 25rem"
-            />
-            <img
-              src="assets/images/aboutme.jpg"
-              width="320"
-              height="427"
-              alt="Hieu Le wearing sunglasses outdoors by the ocean."
-              fetchpriority="high"
-            />
-          </picture>
-        </figure>
+        <div class="hero-portrait"><figure class="portrait"><picture><source type="image/webp" srcset="assets/images/aboutme-480.webp 480w, assets/images/aboutme.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/aboutme.jpg" width="480" height="600" alt="Hieu Le wearing sunglasses outdoors by the ocean." loading="eager" decoding="async" /></picture></figure><p class="photo-note"><span aria-hidden="true">↳</span> A face to put to the code.</p></div>
+        <a class="stage-next" href="#toolkit"><span>Scroll to explore</span><span aria-hidden="true">↓</span></a>
       </section>
 
-      <section class="project-grid" aria-labelledby="work-heading">
-        <h2 class="section-heading" id="work-heading">
-          Projects I am working on
-        </h2>
-
-        <article class="project-card" aria-labelledby="watchtower-heading">
-          <div class="project-art art-watchtower" aria-hidden="true"></div>
-
-          <h3 id="watchtower-heading">
-            <a href="projects.html#watchtower">Watchtower</a>
-          </h3>
-          <p>
-            A platform to track errors, performance metrics, and user events.
-          </p>
-        </article>
-        <article class="project-card" aria-labelledby="reg2schedg-heading">
-          <div class="project-art art-calendar" aria-hidden="true"></div>
-
-          <h3 id="reg2schedg-heading">
-            <a href="projects.html#reg2schedg">Reg2Schedg</a>
-          </h3>
-          <p>
-            A course-planning platform that converts schedule screenshots into
-            structured data.
-          </p>
-        </article>
-        <article class="project-card" aria-labelledby="splitr-heading">
-          <div class="project-art art-receipt" aria-hidden="true"></div>
-
-          <h3 id="splitr-heading">
-            <a href="projects.html#splitr">Splitr</a>
-          </h3>
-          <p>
-            A cross-platform app to automate receipt parsing and split group
-            expenses.
-          </p>
-        </article>
+      <section class="stage toolkit" id="toolkit" aria-labelledby="toolkit-heading">
+        <header class="stage-heading"><p class="eyebrow">01 / Technical skills</p><h2 id="toolkit-heading">My everyday toolkit<span class="accent">.</span></h2><p>The languages, libraries, and tools behind my projects.</p></header>
+        <div class="skills-rows">
+          <div class="skill-row"><h3>Languages</h3><div class="skill-window"><div class="skill-track"><ul class="skill-list">
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/python.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Python</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/java.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Java</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/c.svg" width="32" height="32" alt="" loading="lazy" /></span><span>C</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/cplusplus.svg" width="32" height="32" alt="" loading="lazy" /></span><span>C++</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/postgresql.svg" width="32" height="32" alt="" loading="lazy" /></span><span>SQL</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/javascript.svg" width="32" height="32" alt="" loading="lazy" /></span><span>JavaScript</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/typescript.svg" width="32" height="32" alt="" loading="lazy" /></span><span>TypeScript</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/html5.svg" width="32" height="32" alt="" loading="lazy" /></span><span>HTML</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/css3.svg" width="32" height="32" alt="" loading="lazy" /></span><span>CSS</span></li>
+                </ul></div></div></div>
+          <div class="skill-row"><h3>Frameworks &amp; libraries</h3><div class="skill-window"><div class="skill-track"><ul class="skill-list">
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/react.svg" width="32" height="32" alt="" loading="lazy" /></span><span>React</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/react.svg" width="32" height="32" alt="" loading="lazy" /></span><span>React Native</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/nodejs.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Node.js</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/nextjs.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Next.js</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/express.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Express.js</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/fastapi.svg" width="32" height="32" alt="" loading="lazy" /></span><span>FastAPI</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/pytorch.svg" width="32" height="32" alt="" loading="lazy" /></span><span>PyTorch</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/jest.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Jest</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/junit.svg" width="32" height="32" alt="" loading="lazy" /></span><span>JUnit</span></li>
+                </ul></div></div></div>
+          <div class="skill-row"><h3>Data &amp; developer tools</h3><div class="skill-window"><div class="skill-track"><ul class="skill-list">
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/mongodb.svg" width="32" height="32" alt="" loading="lazy" /></span><span>MongoDB</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/firebase.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Firebase</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/supabase.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Supabase</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/amazonwebservices.svg" width="32" height="32" alt="" loading="lazy" /></span><span>AWS</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/docker.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Docker</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/git.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Git</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/github.svg" width="32" height="32" alt="" loading="lazy" /></span><span>GitHub</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/githubactions.svg" width="32" height="32" alt="" loading="lazy" /></span><span>GitHub Actions</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/gitlab.svg" width="32" height="32" alt="" loading="lazy" /></span><span>GitLab</span></li>
+                  <li class="skill-chip"><span class="skill-icon"><img src="assets/icons/postman.svg" width="32" height="32" alt="" loading="lazy" /></span><span>Postman</span></li>
+                </ul></div></div></div>
+        </div>
+        <div class="skills-footer"><p>From browser interfaces to APIs and machine learning.</p><button id="skills-motion" class="button-secondary" type="button" aria-pressed="false" hidden>Pause skill rotation</button></div>
       </section>
 
-      <section class="outside-grid" aria-labelledby="personal-heading">
-        <div>
-          <h2 id="personal-heading">Outside school</h2>
-          <p><a href="about.html">More about my interests</a></p>
-        </div>
-        <div class="outside-photos">
-          <figure>
-            <picture>
-              <source
-                type="image/webp"
-                srcset="
-                  assets/images/dog1-480.webp 480w,
-                  assets/images/dog1.webp     900w
-                "
-                sizes="(max-width: 48rem) calc(50vw - 4rem), (max-width: 76rem) 22vw, 17rem"
-              />
-              <img
-                src="assets/images/dog1.jpg"
-                width="160"
-                height="213"
-                alt="A small tan dog sitting on a car seat."
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </figure>
-          <figure>
-            <picture>
-              <source
-                type="image/webp"
-                srcset="
-                  assets/images/badminton-480.webp  480w,
-                  assets/images/badminton.webp     1200w
-                "
-                sizes="(max-width: 48rem) calc(50vw - 4rem), (max-width: 76rem) 22vw, 17rem"
-              />
-              <img
-                src="assets/images/badminton.jpg"
-                width="160"
-                height="107"
-                alt="A badminton player jumping to hit the shuttlecock in an indoor gym."
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </figure>
-        </div>
+      <section class="stage" id="selected-work" aria-labelledby="work-heading">
+        <header class="stage-heading"><p class="eyebrow">02 / Selected work</p><h2 id="work-heading">A few things I’ve built<span class="accent">.</span></h2><p>Different problems. A reason to build each one.</p></header>
+        <ol class="work-index">
+          <li><a href="projects.html#watchtower"><span class="work-number" aria-hidden="true">01</span><span><strong>WatchTower</strong><span class="work-summary">A clearer picture of what happens after deployment.</span></span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="projects.html#reg2schedg"><span class="work-number" aria-hidden="true">02</span><span><strong>Reg2Schedg</strong><span class="work-summary">From a schedule screenshot to a course plan.</span></span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li><a href="projects.html#splitr"><span class="work-number" aria-hidden="true">03</span><span><strong>Splitr</strong><span class="work-summary">Less receipt math. Easier shared expenses.</span></span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+        </ol>
+      </section>
+
+      <section class="stage contact-stage" id="say-hello" aria-labelledby="hello-heading">
+        <p class="eyebrow">03 / Say hello</p><h2 id="hello-heading">Have something<br />in mind<span class="accent">?</span></h2><p class="section-lead">A project, a question, or a conversation about building things.</p>
+        <div class="actions"><a class="button-link" href="form-with-js.html">Let’s talk <span aria-hidden="true">↗</span></a><a class="text-link" href="about.html">Meet me off the keyboard</a></div>
+        <p class="small-note">The contact form is a demo that displays submitted data through httpbin.</p>
       </section>
     </main>
-
-    <footer>
-      <p>&copy; Hieu Le</p>
-      <p><a href="projects.html#resume">Resume information</a></p>
-    </footer>
+    <footer><p>&copy; Hieu Le</p><a href="assets/documents/hieu-le-resume.pdf">Resume (PDF)</a></footer>
   </body>
 </html>

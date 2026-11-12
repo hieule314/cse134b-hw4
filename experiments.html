@@ -8,29 +8,45 @@
       content="Hieu Le's CSE 134B sandbox for native video, audio, canvas, dialogs, disclosure elements, and templates."
     />
     <title>Experiments | Hieu Le</title>
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/images/favicon-hieu.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="theme.js" defer></script>
+    <script src="portfolio.js" defer></script>
   </head>
   <body class="experiments">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header>
-      <p class="site-name"><a href="index.html">Hieu Le</a></p>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About me</a></li>
-          <li><a href="projects.html">Projects &amp; resume</a></li>
-          <li>
-            <a href="experiments.html" aria-current="page">Experiments</a>
-          </li>
-          <li><a href="form-no-js.html">Contact (HTML)</a></li>
-          <li><a href="form-with-js.html">Contact (JS)</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle button-secondary" type="button" hidden>
-        Switch to dark theme
-      </button>
+    <header class="site-explorer">
+      <div class="explorer-brand">
+        <p class="site-name"><a href="index.html">Hieu Le<span aria-hidden="true">.</span></a></p>
+        <p class="brand-caption">Software engineering &amp; AI</p>
+      </div>
+      <details class="explorer-panel" open>
+        <summary class="explorer-title" aria-label="Site explorer"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span> EXPLORER</summary>
+        <nav aria-label="Main navigation" class="explorer-tree">
+          <details class="explorer-folder" open>
+            <summary>portfolio/</summary>
+            <ul>
+              <li><a href="index.html" aria-label="Home"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>index.html</a></li>
+              <li><a href="about.html" aria-label="About me"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>about.html</a></li>
+              <li><a href="projects.html" aria-label="Projects & resume"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>projects.html</a></li>
+              <li><a href="experiments.html" aria-label="Experiments" aria-current="page"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>experiments.html</a></li>
+            </ul>
+          </details>
+          <details class="explorer-folder" open>
+            <summary>contact/</summary>
+            <ul>
+              <li><a href="form-no-js.html" aria-label="Contact (HTML)"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>form-no-js.html</a></li>
+              <li><a href="form-with-js.html" aria-label="Contact (JS)"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>form-with-js.html</a></li>
+            </ul>
+          </details>
+        </nav>
+      </details>
+      <div class="explorer-bottom">
+        <button class="theme-toggle button-secondary" type="button" hidden>Switch to dark theme</button>
+        <p class="explorer-social"><a href="https://github.com/hieule314">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/hieule314/">LinkedIn <span aria-hidden="true">↗</span></a></p>
+        <p class="explorer-location">Mathematics–Computer Science<br />UC San Diego</p>
+      </div>
     </header>
     <main id="main-content" tabindex="-1">
       <h1>HTML experiments</h1>

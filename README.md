@@ -7,3 +7,6 @@
 
 My personal portfolio uses semantic HTML, shared CSS, and native browser APIs.
 Both contact forms are linked from every portfolio page's main navigation.
+
+The portfolio includes an explorer sidebar, separate screens for each main section,
+and rotating technical-skill rows. [Design notes and asset credits](docs/portfolio-design.md).

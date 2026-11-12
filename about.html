@@ -3,297 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Get to know Hieu Le, a UC San Diego Mathematics–Computer Science student, through his background, two dogs, sports, and favorite video games."
-    />
-    <title>About Me | Hieu Le</title>
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Meet Poppy and Peanut, explore my favorite sports, and see what I play off the keyboard." />
+    <title>Off the Keyboard | Hieu Le</title>
+    <link rel="icon" href="assets/images/favicon-hieu.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="theme.js" defer></script>
+    <script src="portfolio.js" defer></script>
   </head>
-  <body>
+  <body class="portfolio-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header>
-      <p class="site-name"><a href="index.html">Hieu Le</a></p>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About me</a></li>
-          <li><a href="projects.html">Projects &amp; resume</a></li>
-          <li><a href="experiments.html">Experiments</a></li>
-          <li><a href="form-no-js.html">Contact (HTML)</a></li>
-          <li><a href="form-with-js.html">Contact (JS)</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle button-secondary" type="button" hidden>
-        Switch to dark theme
-      </button>
+    <header class="site-explorer">
+      <div class="explorer-brand">
+        <p class="site-name"><a href="index.html">Hieu Le<span aria-hidden="true">.</span></a></p>
+        <p class="brand-caption">Software engineering &amp; AI</p>
+      </div>
+      <details class="explorer-panel" open>
+        <summary class="explorer-title" aria-label="Site explorer"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span> EXPLORER</summary>
+        <nav aria-label="Main navigation" class="explorer-tree">
+          <details class="explorer-folder" open>
+            <summary>portfolio/</summary>
+            <ul>
+              <li><a href="index.html" aria-label="Home"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>index.html</a></li>
+              <li><a href="about.html" aria-label="About me" aria-current="page"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>about.html</a></li>
+              <li><a href="projects.html" aria-label="Projects & resume"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>projects.html</a></li>
+              <li><a href="experiments.html" aria-label="Experiments"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>experiments.html</a></li>
+            </ul>
+          </details>
+          <details class="explorer-folder" open>
+            <summary>contact/</summary>
+            <ul>
+              <li><a href="form-no-js.html" aria-label="Contact (HTML)"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>form-no-js.html</a></li>
+              <li><a href="form-with-js.html" aria-label="Contact (JS)"><span class="file-icon" aria-hidden="true">&lt;&gt;</span>form-with-js.html</a></li>
+            </ul>
+          </details>
+        </nav>
+        <nav class="page-outline" aria-label="Page sections">
+          <p>ON THIS PAGE</p>
+          <ul>
+            <li><a href="#dogs" data-section="dogs"><span aria-hidden="true">01</span> Poppy & Peanut</a></li>
+            <li><a href="#sports" data-section="sports"><span aria-hidden="true">02</span> On the court</a></li>
+            <li><a href="#games" data-section="games"><span aria-hidden="true">03</span> One more game</a></li>
+          </ul>
+        </nav>
+      </details>
+      <div class="explorer-bottom">
+        <button class="theme-toggle button-secondary" type="button" hidden>Switch to dark theme</button>
+        <p class="explorer-social"><a href="https://github.com/hieule314">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/hieule314/">LinkedIn <span aria-hidden="true">↗</span></a></p>
+        <p class="explorer-location">Mathematics–Computer Science<br />UC San Diego</p>
+      </div>
     </header>
-    <main id="main-content" tabindex="-1">
-      <h1>About me</h1>
-
-      <section class="about-background" aria-labelledby="background-heading">
-        <h2 id="background-heading">My background</h2>
-        <p>
-          I am Hieu Le, a fourth-year Mathematics–Computer Science student at
-          the University of California, San Diego. I am a full stack developer
-          working on websites and AI/ML projects.
-        </p>
-        <p>
-          My experience includes delivering AI features for Treevah, a B2C SaaS
-          AI startup, building a MERN-stack travel planner with a team at the
-          San Diego Supercomputer Center, and machine learning research under
-          Ryan Kastner on real-time ecological monitoring systems for the San
-          Diego Zoo.
-        </p>
-        <figure class="portrait">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/aboutme-480.webp 480w,
-                assets/images/aboutme.webp     900w
-              "
-              sizes="(max-width: 48rem) min(23.375rem, calc(100vw - 4.875rem)), (max-width: 76rem) calc(39vw - 4.75rem), 25rem"
-            />
-            <img
-              src="assets/images/aboutme.jpg"
-              alt="Hieu Le wearing sunglasses outdoors by the ocean."
-              width="320"
-              height="427"
-              fetchpriority="high"
-            />
-          </picture>
-        </figure>
-        <p><a href="projects.html">Take a look at my projects</a>.</p>
+    <main id="main-content" class="staged" tabindex="-1">
+      <section class="stage" id="dogs" aria-labelledby="about-heading">
+        <header class="stage-heading"><p class="eyebrow">About / 01</p><h1 id="about-heading">Off the keyboard<span class="accent">.</span></h1><p>When I’m away from projects and classes, there’s usually a dog, a game, or a court involved.</p></header>
+        <div class="personal-heading"><h2>Meet Poppy &amp; Peanut.</h2><p>My Pomeranian and Jack Russell Terrier.</p></div>
+        <div class="photo-pair dog-photos"><figure class="story-photo"><picture><source type="image/webp" srcset="assets/images/dog1-480.webp 480w, assets/images/dog1.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/dog1.jpg" width="480" height="600" alt="Poppy, my Pomeranian, sitting on a car seat." loading="lazy" decoding="async" /></picture><figcaption>Poppy / Pomeranian</figcaption></figure><figure class="story-photo"><picture><source type="image/webp" srcset="assets/images/dog2-480.webp 480w, assets/images/dog2.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/dog2.jpg" width="480" height="600" alt="Peanut, my Jack Russell Terrier, posing with me in a car." loading="lazy" decoding="async" /></picture><figcaption>Peanut / Jack Russell Terrier</figcaption></figure></div>
       </section>
-
-      <section class="photo-gallery dog-gallery" aria-labelledby="dog-heading">
-        <h2 id="dog-heading">My dogs</h2>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/dog1-480.webp 480w,
-                assets/images/dog1.webp     900w
-              "
-              sizes="(max-width: 48rem) calc(50vw - 3rem), (max-width: 54rem) calc(50vw - 4rem), 23rem"
-            />
-            <img
-              src="assets/images/dog1.jpg"
-              width="160"
-              height="213"
-              alt="Poppy, my Pomeranian, sitting on a car seat."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/dog2-480.webp 480w,
-                assets/images/dog2.webp     900w
-              "
-              sizes="(max-width: 48rem) calc(50vw - 3rem), (max-width: 54rem) calc(50vw - 4rem), 23rem"
-            />
-            <img
-              src="assets/images/dog2.jpg"
-              width="160"
-              height="213"
-              alt="Peanut, my Jack Russell Terrier, posing with me in a car."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <p class="photo-caption">
-          I have two dogs! Poppy (Pomeranian) and Peanut (Jack Russell Terrier).
-        </p>
+      <section class="stage" id="sports" aria-labelledby="sports-heading">
+        <header class="stage-heading"><p class="eyebrow">About / 02</p><h2 id="sports-heading">Usually up for a game<span class="accent">.</span></h2><p>Badminton, pickleball, soccer, and basketball. Hiking and lifting weights round out the mix.</p></header>
+        <div class="photo-pair sports-photos"><figure class="story-photo"><picture><source type="image/webp" srcset="assets/images/badminton-480.webp 480w, assets/images/badminton.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/badminton.jpg" width="480" height="600" alt="Jumping to hit the shuttlecock during a badminton game." loading="lazy" decoding="async" /></picture><figcaption>On the badminton court</figcaption></figure><figure class="story-photo"><picture><source type="image/webp" srcset="assets/images/gym-480.webp 480w, assets/images/gym.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/gym.jpg" width="480" height="600" alt="Taking a mirror selfie at the gym." loading="lazy" decoding="async" /></picture><figcaption>A little time at the gym</figcaption></figure></div>
       </section>
-
-      <section
-        class="photo-gallery sports-gallery"
-        aria-labelledby="sports-heading"
-      >
-        <h2 id="sports-heading">Sports</h2>
-        <p>
-          I enjoy playing badminton, pickleball, soccer, and basketball, as well
-          as hiking and lifting weights.
-        </p>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/badminton-480.webp  480w,
-                assets/images/badminton.webp     1200w
-              "
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(50vw - 4rem), 34rem"
-            />
-            <img
-              src="assets/images/badminton.jpg"
-              width="320"
-              height="213"
-              alt="Jumping to hit the shuttlecock during a badminton game."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/badminton-team-480.webp  480w,
-                assets/images/badminton-team.webp     1167w
-              "
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(50vw - 4rem), 34rem"
-            />
-            <img
-              src="assets/images/badminton-team.jpg"
-              width="320"
-              height="329"
-              alt="Our badminton group posing together in a gym."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/steph-curry-480.webp 480w,
-                assets/images/steph-curry.webp     640w
-              "
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(50vw - 4rem), 34rem"
-            />
-            <img
-              src="assets/images/steph-curry.jpg"
-              width="320"
-              height="240"
-              alt="A basketball graphic of Stephen Curry reaching for the ball."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/gym-480.webp 480w,
-                assets/images/gym.webp     900w
-              "
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(50vw - 4rem), 34rem"
-            />
-            <img
-              src="assets/images/gym.jpg"
-              width="320"
-              height="427"
-              alt="Taking a mirror selfie at the gym."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-      </section>
-
-      <section
-        class="photo-gallery games-gallery"
-        aria-labelledby="games-heading"
-      >
-        <h2 id="games-heading">Video games</h2>
-        <p>
-          My favorite games to play are Minecraft, Fortnite, Valorant, Super
-          Smash Bros. Ultimate, and Roblox.
-        </p>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/fortnite-llama-480.webp 480w,
-                assets/images/fortnite-llama.webp     900w
-              "
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(33.333vw - 3.55rem), 22rem"
-            />
-            <img
-              src="assets/images/fortnite-llama.jpg"
-              width="320"
-              height="427"
-              alt="Standing beside a large LEGO Fortnite llama."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="
-                assets/images/minecraft-480.webp  480w,
-                assets/images/minecraft.webp     1196w
-              "
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(33.333vw - 3.55rem), 22rem"
-            />
-            <img
-              src="assets/images/minecraft.jpg"
-              width="320"
-              height="265"
-              alt="Four Minecraft characters posing together in an underground stronghold."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-        <figure>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="assets/images/king-k-rool.webp 409w"
-              sizes="(max-width: 48rem) calc(100vw - 3.7rem), (max-width: 76rem) calc(33.333vw - 3.55rem), 22rem"
-            />
-            <img
-              src="assets/images/king-k-rool.jpg"
-              width="320"
-              height="382"
-              alt="King K. Rool, the crocodile character I play in Super Smash Bros. Ultimate."
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </figure>
-      </section>
-
-      <section aria-labelledby="social-heading">
-        <h2 id="social-heading">Find me online</h2>
-        <ul class="social-links">
-          <li>
-            <a href="https://www.instagram.com/hieubae/"
-              >Hieu Le on Instagram</a
-            >
-          </li>
-          <li><a href="https://github.com/hieule314">Hieu Le on GitHub</a></li>
-          <li>
-            <a href="https://www.linkedin.com/in/hieule314/"
-              >Hieu Le on LinkedIn</a
-            >
-          </li>
-        </ul>
+      <section class="stage" id="games" aria-labelledby="games-heading">
+        <header class="stage-heading"><p class="eyebrow">About / 03</p><h2 id="games-heading">One more game<span class="accent">.</span></h2><p>Minecraft, Fortnite, Valorant, Super Smash Bros. Ultimate, and Roblox are in the rotation. King K. Rool is my Smash pick.</p></header>
+        <div class="game-photos"><figure class="story-photo"><picture><source type="image/webp" srcset="assets/images/fortnite-llama-480.webp 480w, assets/images/fortnite-llama.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/fortnite-llama.jpg" width="480" height="600" alt="Standing beside a large LEGO Fortnite llama." loading="lazy" decoding="async" /></picture><figcaption>A familiar Fortnite face</figcaption></figure><figure class="story-photo"><picture><source type="image/webp" srcset="assets/images/minecraft-480.webp 480w, assets/images/minecraft.webp 900w" sizes="(max-width: 48rem) calc(100vw - 3rem), 30vw" /><img src="assets/images/minecraft.jpg" width="480" height="600" alt="Four Minecraft characters posing in an underground stronghold." loading="lazy" decoding="async" /></picture><figcaption>Minecraft with the crew</figcaption></figure><figure class="story-photo"><img src="assets/images/king-k-rool.webp" width="409" height="489" alt="King K. Rool, my Super Smash Bros. Ultimate character." loading="lazy" /><figcaption>My Smash pick</figcaption></figure></div>
+        <p class="social-links"><a href="https://www.instagram.com/hieubae/">Instagram ↗</a><a href="https://github.com/hieule314">GitHub ↗</a><a href="https://www.linkedin.com/in/hieule314/">LinkedIn ↗</a></p>
       </section>
     </main>
-    <footer>
-      <p>&copy; Hieu Le</p>
-    </footer>
+    <footer><p>&copy; Hieu Le</p><a href="assets/documents/hieu-le-resume.pdf">Resume (PDF)</a></footer>
   </body>
 </html>
