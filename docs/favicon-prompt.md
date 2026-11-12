@@ -1,6 +1,6 @@
 # Favicon edit
 
-Created with the built-in ImageGen tool from the user-provided cartoon. The generated transparent portrait is used only for the favicon and Apple touch icon. The original initial-based SVG remains available in the repository.
+Created with the built-in ImageGen tool from the user-provided cartoon. The generated transparent portrait is used for the favicon and Apple touch icon, and later reused beside the sidebar name at the user’s request. The original initial-based SVG remains available in the repository.
 
 ## Final prompt
 

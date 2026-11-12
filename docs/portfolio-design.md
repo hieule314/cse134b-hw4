@@ -28,7 +28,7 @@ locally from Devicon with its license in `assets/icons/`.
 - Main narrative sections use `min-height: 100svh`. They can grow when text or images need more room. Desktop proximity scroll snapping helps align sections without intercepting wheel, touch, or keyboard input.
 - The page outline indicates the current section without moving keyboard focus.
 - Skill rows have a pause/resume button. Reduced motion and disabled JavaScript show complete, static lists. Duplicate animation strips are hidden from assistive technology.
-- The generated character is used only for favicon/bookmark images. The original initials SVG is retained.
+- The illustrated character is used for browser/bookmark icons and beside the sidebar name. The sidebar portrait has a brief CSS greeting that respects reduced motion. The original initials SVG is retained.
 - `form-no-js.html` has no scripts or inline event handlers. Form constraints and `form.js` have been preserved.
 - Theme switching still uses persistent preferences and the View Transition API, with the existing storage and reduced-motion fallbacks.
 

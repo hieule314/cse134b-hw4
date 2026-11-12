@@ -15,8 +15,7 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-explorer">
       <div class="explorer-brand">
-        <p class="site-name"><a href="index.html">Hieu Le<span aria-hidden="true">.</span></a></p>
-        <p class="brand-caption">Software engineering &amp; AI</p>
+        <p class="site-name"><a href="index.html"><img class="brand-avatar" src="assets/images/hieu-avatar.png" width="44" height="44" alt="" /><span class="brand-name">Hieu Le<span class="brand-dot" aria-hidden="true">.</span></span></a></p>
       </div>
       <details class="explorer-panel" open>
         <summary class="explorer-title" aria-label="Site explorer"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span> EXPLORER</summary>
@@ -41,38 +40,37 @@
         <nav class="page-outline" aria-label="Page sections">
           <p>ON THIS PAGE</p>
           <ul>
-            <li><a href="#watchtower" data-section="watchtower"><span aria-hidden="true">01</span> WatchTower</a></li>
-            <li><a href="#reg2schedg" data-section="reg2schedg"><span aria-hidden="true">02</span> Reg2Schedg</a></li>
-            <li><a href="#splitr" data-section="splitr"><span aria-hidden="true">03</span> Splitr</a></li>
-            <li><a href="#resume" data-section="resume"><span aria-hidden="true">04</span> Resume & experience</a></li>
+            <li><a href="#watchtower" data-section="watchtower">WatchTower</a></li>
+            <li><a href="#reg2schedg" data-section="reg2schedg">Reg2Schedg</a></li>
+            <li><a href="#splitr" data-section="splitr">Splitr</a></li>
+            <li><a href="#resume" data-section="resume">Resume & experience</a></li>
           </ul>
         </nav>
       </details>
       <div class="explorer-bottom">
         <button class="theme-toggle button-secondary" type="button" hidden>Switch to dark theme</button>
         <p class="explorer-social"><a href="https://github.com/hieule314">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/hieule314/">LinkedIn <span aria-hidden="true">↗</span></a></p>
-        <p class="explorer-location">Mathematics–Computer Science<br />UC San Diego</p>
       </div>
     </header>
     <main id="main-content" class="staged" tabindex="-1">
       <section class="stage project-stage" id="watchtower" aria-labelledby="watchtower-heading">
-        <header class="project-page-heading"><p class="eyebrow">Projects / 01</p><h1>Selected projects</h1></header>
+        <header class="project-page-heading"><p class="eyebrow">Projects</p><h1>Selected projects</h1></header>
         <div class="project-layout">
-          <div class="project-visual art-watchtower"><span class="visual-label">Browser → telemetry → dashboard</span><div class="project-art" aria-hidden="true"></div><p>WatchTower</p></div>
+          <div class="project-visual art-watchtower"><span class="visual-label">Browser → telemetry → dashboard</span><div class="project-art" aria-hidden="true"></div></div>
           <div class="project-copy"><p class="project-kind">Developer tools · Web application</p><h2 id="watchtower-heading">WatchTower</h2><p class="project-question">What happens after your software goes live?</p><p>WatchTower brings errors, performance metrics, and user events into a single dashboard. The goal is to give browser activity a place where a developer can follow it.</p><h3>Inside the build</h3><p>I led the frontend work, connecting browser SDK telemetry with a Supabase/PostgreSQL backend and Clerk authentication. Jest, Playwright, and GitHub Actions support testing and delivery.</p><ul class="stack-tags" aria-label="WatchTower technologies"><li>JavaScript</li><li>HTML &amp; CSS</li><li>Supabase</li><li>PostgreSQL</li><li>Playwright</li></ul><p class="project-recognition">Best Team award · <time datetime="2026-06">June 2026</time></p></div>
         </div>
       </section>
       <section class="stage project-stage" id="reg2schedg" aria-labelledby="reg2schedg-heading">
-        <p class="eyebrow">Projects / 02</p>
+        <p class="eyebrow">Projects</p>
         <div class="project-layout">
-          <div class="project-visual art-calendar"><span class="visual-label">Screenshot → course data → plan</span><div class="project-art" aria-hidden="true"></div><p>Reg2Schedg</p></div>
+          <div class="project-visual art-calendar"><span class="visual-label">Screenshot → course data → plan</span><div class="project-art" aria-hidden="true"></div></div>
           <div class="project-copy"><p class="project-kind">Student tools · AI-assisted planning</p><h2 id="reg2schedg-heading">Reg2Schedg</h2><p class="project-question">A screenshot is a starting point, not a schedule.</p><p>Course planning means piecing together schedules, evaluations, and professor information. Reg2Schedg turns a schedule screenshot into structured data and brings that context into the planning process.</p><h3>Inside the build</h3><p>I built a research pipeline with Browser Use and normalized course evaluations in Supabase. The platform combines course logistics, professor ratings, and student sentiment to help students compare options.</p><ul class="stack-tags" aria-label="Reg2Schedg technologies"><li>TypeScript</li><li>Python</li><li>SQL</li><li>Supabase</li></ul><a class="text-link" href="https://www.reg2schedg.com/">Try Reg2Schedg <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
       <section class="stage project-stage" id="splitr" aria-labelledby="splitr-heading">
-        <p class="eyebrow">Projects / 03</p>
+        <p class="eyebrow">Projects</p>
         <div class="project-layout">
-          <div class="project-visual art-receipt"><span class="visual-label">Receipt → items → shared expenses</span><div class="project-art" aria-hidden="true"></div><p>Splitr</p></div>
+          <div class="project-visual art-receipt"><span class="visual-label">Receipt → items → shared expenses</span><div class="project-art" aria-hidden="true"></div></div>
           <div class="project-copy"><p class="project-kind">Mobile application · OCR &amp; AI</p><h2 id="splitr-heading">Splitr</h2><p class="project-question">The meal is over. The receipt math shouldn’t take all night.</p><p>Splitr turns receipt photos into structured items for shared expenses. It brings receipt parsing and user history into a cross-platform mobile app.</p><h3>Inside the build</h3><p>I developed the React Native app with Expo, using Google Vision OCR and an OpenAI model to structure receipt data. Firebase handles authentication, SMS verification, and saved receipt history.</p><ul class="stack-tags" aria-label="Splitr technologies"><li>React Native</li><li>Expo</li><li>FastAPI</li><li>Firebase</li><li>TypeScript</li></ul><a class="text-link" href="https://github.com/hieule314">Browse my GitHub <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
